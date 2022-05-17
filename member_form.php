@@ -1,11 +1,7 @@
 <?php error_reporting(E_ERROR | E_WARNING | E_PARSE); ?>
-
-<html>
-    <head>
-        <meta charset="utf-8">
-
-    </head>
-    <body>
+<?php
+include_once("./header.php");
+?>
 <script>
    function check_input()
    {
