@@ -24,10 +24,4 @@
   <li><a href="./api/logout.php">로그아웃</a></li>
   <?php
     }
-
-    if($userlevel == 9){
   ?>
-  <li>관리자 모드<li>
-    <?php
-      }
-    ?>
