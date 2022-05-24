@@ -22,6 +22,17 @@ include_once("./header.php");
           document.member_form.pass_confirm.focus();
           return;
       }
+      if (!document.member_form.name.value) {
+          alert("이름을 입력하세요!");
+          document.member_form.name.focus();
+          return;
+      }
+
+      if (!document.member_form.email1.value) {
+          alert("이메일 주소를 입력하세요!");
+          document.member_form.email1.focus();
+          return;
+      }
 
       if (document.member_form.pass.value !=
             document.member_form.pass_confirm.value) {
@@ -37,6 +48,9 @@ include_once("./header.php");
       document.member_form.id.value = "";
       document.member_form.pass.value = "";
       document.member_form.pass_confirm.value = "";
+      document.member_form.name.value = "";
+      document.member_form.email1.value = "";
+      document.member_form.email2.value = "";
       document.member_form.id.focus();
       return;
    }
@@ -63,6 +77,19 @@ include_once("./header.php");
             <div class="col2">
                 <input type="password" name="pass_confirm">
             </div>
+        </div>
+        <div class="form">
+          <div class="col1">이름</div>
+          <div class="col2">
+        <input type="text" name="name">
+          </div>
+        </div>
+        <div class="clear"></div>
+        <div class="form email">
+          <div class="col1">이메일</div>
+          <div class="col2">
+        <input type="text" name="email1">@<input type="text" name="email2">
+          </div>
         </div>
 
         <div class="bottom_line"> </div>

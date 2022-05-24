@@ -1,8 +1,11 @@
 <?php
+include_once("../class/db.php");
+?>
+
+<?php
   $id = $_POST["id"];
   $pass = $_POST["pass"];
 
-  $con = mysqli_connect("localhost", "pjw", "pjw20040715", "pjwweb");
   $sql = "SELECT * FROM men WHERE id='$id'";
   $result = mysqli_query($con, $sql);
 
