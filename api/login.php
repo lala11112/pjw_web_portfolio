@@ -37,6 +37,7 @@ include_once("../class/db.php");
     else{
       session_start();
       $_SESSION["userid"] = $row["id"];
+      $_SESSION["username"] = $row["name"];
       $_SESSION["userlevel"] = $row["level"];
       echo "
           <script>

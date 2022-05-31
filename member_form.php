@@ -2,6 +2,9 @@
 <?php
 include_once("./header.php");
 ?>
+<?php
+include_once("./class/bootstrap.php");
+?>
 <script>
    function check_input()
    {

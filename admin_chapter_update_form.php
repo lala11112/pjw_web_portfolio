@@ -12,12 +12,13 @@ include_once("./class/db.php");
 ?>
       <h2>목차 수정</h2>
       <table class="table table-hover">
-        <div class="container-fluid" style="width:900px">
+        <div class="container-fluid" style="width:1500px">
           <div class="row">
-            <div class="col-md-3">번호</div>
+            <div class="col-md-2">번호</div>
             <div class="col-md-3">제목</div>
             <div class="col-md-3">소제목</div>
-            <div class="col-md-3">수정</div>
+            <div class="col-md-2">수정</div>
+            <div class="col-md-2">삭제</div>
           </div>
         </div>
       </table>
@@ -37,12 +38,13 @@ include_once("./class/db.php");
         ?>
         <br></br>
         <form method="post" action="./api/admin_chapter_update.php?num=<?=$num?>">
-          <div class="container-fluid" style="width:900px">
+          <div class="container-fluid" style="width:1500px">
             <div class="row">
-              <div class="col-md-3"><?=$number?></div>
+              <div class="col-md-2"><?=$number?></div>
               <div class="col-md-3"><input type="text" name="title" value="<?=$title?>"></div>
               <div class="col-md-3"><input type="text" name="subtitle" value="<?=$subtitle?>"></div>
-              <span class="col-md-3"><button type="submit">수정</button></span>
+              <span class="col-md-2"><button type="submit">수정</button></span>
+              <div class="col-md-2"><button type="button" onclick="location.href='./api/admin_chapter_delete.php?num=<?=$num?>'">삭제</button></div>
             </div>
           </div>
     		</form>

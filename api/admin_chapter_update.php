@@ -15,6 +15,7 @@ include_once("../class/db.php");
   mysqli_close($con);
   echo "
      <script>
+        alert('목차가 수정되었습니다.');
          location.href = '../admin_chapter_update_form.php';
      </script>
    ";

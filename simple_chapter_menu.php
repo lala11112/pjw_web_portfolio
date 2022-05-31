@@ -1,3 +1,4 @@
+
 <?php
 include_once("./class/db.php");
 ?>
@@ -5,13 +6,12 @@ include_once("./class/db.php");
 include_once("./class/bootstrap.php");
 ?>
 <?php
-include_once("./class/chapter_list.php");
+include_once("./header.php");
 ?>
-
 <?php
   $sql = "select * from chapter order by num desc";
   $result = mysqli_query($con, $sql);
-  $total_record = mysqli_num_rows($result); // 전체 챕터 수
+  $total_record = mysqli_num_rows($result); // 전체 회원 수
 
   $number = $total_record;
 
@@ -33,4 +33,7 @@ include_once("./class/chapter_list.php");
    	   $number--;
    }
 ?>
-<h2>메인 페이지 목차니까 멋지게 꾸며야함 잊지마 미래의 나!            ↑<h2>
+
+<?php
+include_once("./footer.php");
+?>

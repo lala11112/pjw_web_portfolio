@@ -6,14 +6,14 @@ include_once("../class/db.php");
     $num   = $_GET["num"];
 
 
-    $sql = "delete from men where num = $num";
+    $sql = "delete from board where num = $num";
     mysqli_query($con, $sql);
 
     mysqli_close($con);
     echo "
 	     <script>
-            alert('유저가 삭제되었습니다.');
-	         location.href = '../admin_user.php';
+            alert('게시글이 삭제되었습니다.');
+	         location.href = '../admin.php';
 	     </script>
 	   ";
 ?>

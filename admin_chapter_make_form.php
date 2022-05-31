@@ -30,16 +30,18 @@ include_once("./class/admin_menu.php");
 
 </script>
 <form  name="chapter_form" method="post" action="./api/chapter_insert.php">
+  <div class="row">
+
     <h2>목차 생성</h2>
         <div class="form">
-            <div class="col1">제목</div>
+            <div class="col-md-4">제목</div>
                 <input type="text" name="title">
         </div>
         <div class="clear"></div>
 
         <div class="form">
-            <div class="col1">소제목</div>
-            <div class="col2">
+            <div class="col-md-4">소제목</div>
+            <div class="col-md-4">
                 <input type="text" name="subtitle">
             </div>
         </div>
@@ -50,6 +52,7 @@ include_once("./class/admin_menu.php");
         <input type='button' value='목차생성하기' onclick="check_input()"/>&nbsp;
         <input type='button' value='취소하기' onclick="reset_form()"/>
         </div>
+  </div>
 </form>
 
 <?php
