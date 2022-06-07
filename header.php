@@ -1,14 +1,16 @@
 <html>
     <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
     </head>
     <body>
       <?php
-      include_once("./class/bootstrap.php");
+        include_once $_SERVER["DOCUMENT_ROOT"]."/class/bootstrap.php";
       ?>
       <?php
-      include_once("./class/chapter_list.php");
+      include_once $_SERVER["DOCUMENT_ROOT"]."/class/chapter_list.php";
       ?>
       <?php
         session_start();
@@ -25,16 +27,13 @@
  <nav class="navbar navbar-expand-lg bg-light">
    <div class="container-fluid">
      <a class="navbar-brand" href="index.php">박재웅의 포트폴리오</a>
-     <button class="navbar-toggler btn btn-primary btn-lg active" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+     <button class="navbar-toggler btn btn-primary btn-lg active dropdown-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       메뉴
      </button>
      <div class="collapse navbar-collapse" id="navbarSupportedContent">
        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
          <li class="nav-item">
            <a class="nav-link active" aria-current="page" href="index.php">메인 페이지로</a>
-         </li>
-         <li class="nav-item">
-           <a class="nav-link" href="board_form.php">게시글 작성하기</a>
          </li>
          <li class="nav-item dropdown">
            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -48,7 +47,7 @@
                $title = $row["title"];
                $belongingflie = $row["belongingflie"];
            ?>
-                 <li><a class="dropdown-item" href="./chapter/<?=$belongingflie?>.php"><?=$title?></a></li>
+                 <li><a class="dropdown-item" href="./<?=$belongingflie?>.php"><?=$title?></a></li>
            <?php
               	   $number--;
               }
@@ -75,8 +74,8 @@
 <nav class="navbar navbar-expand-lg bg-light">
   <div class="container-fluid">
     <a class="navbar-brand" href="index.php">박재웅의 포트폴리오</a>
-    <button class="navbar-toggler btn btn-primary btn-lg active" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-     메뉴
+    <button class="navbar-toggler btn btn-primary btn-lg active dropdown-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      메뉴
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -98,7 +97,7 @@
               $title = $row["title"];
               $belongingflie = $row["belongingflie"];
           ?>
-                <li><a class="dropdown-item" href="./chapter/<?=$belongingflie?>.php"><?=$title?></a></li>
+                <li><a class="dropdown-item" href="./<?=$belongingflie?>.php"><?=$title?></a></li>
           <?php
              	   $number--;
              }
@@ -117,4 +116,3 @@
   <?php
     }
   ?>
-  <br></br>

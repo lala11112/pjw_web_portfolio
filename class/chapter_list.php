@@ -1,8 +1,8 @@
 <?php
-include_once("./class/db.php");
+include_once $_SERVER["DOCUMENT_ROOT"]."/class/db.php";
 ?>
 <?php
-include_once("./class/bootstrap.php");
+include_once $_SERVER["DOCUMENT_ROOT"]."/class/bootstrap.php";
 ?>
 <?php
   $sql = "select * from chapter order by num desc";
